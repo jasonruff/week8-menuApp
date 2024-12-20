@@ -127,8 +127,10 @@ showCategoryMenuOptions(categoryInfo){
 
     deleteDrink(){
         let index = prompt ("Enter the name of the drink you wish to delete:")
-        if(index > -1 && index < this.selectedCategory.length){
+        if(index > -1 && index < this.selectedCategory.drinks.length){
             this.selectedCategory.drinks.splice(index,1);
+        }else{
+            alert("Invalid drink number")
         }
     }
 }
